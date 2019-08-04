@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page %}{{ imageObj.title }} Memes found! Get free {{ imageObj.title }} memes on Epic Meme Club!{% endblock %}
+{% block description %}Someone uploaded a {{ imageObj.title }} meme! Get a free {{ imageObj.title }} meme on epicmeme.club - no account required.{% endblock %}
+
+
+{% block content %}
+
+{% include "imagesharing/image-detail-inline.html" with imageObj=imageObj %}
+
+<h1>{{ imageObj.title }}</h1>
+<p>Someone uploaded this {{ imageObj.title }} meme.</p>
+
+<a class="btn btn-info" href="/imagelist/"><span class="fas fa-angle-left"></span> Back</a>
+<a class="btn btn-success" href="#"><span class="fas fa-copy"></span> Copy link</a>
+{% if user.is_authenticated %}
+    <a class="btn btn-danger" href="/imagelist/{{ imageObj.slug }}/delete"><span class="fas fa-trash"></span> Remove</a>
+{% endif %}
+
+
+
+
+{% endblock %}

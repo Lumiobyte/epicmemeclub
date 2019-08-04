@@ -1,0 +1,14 @@
+<div class="card text-white bg-secondary shadow mb-3 mr-2 ml-2 mx-auto" style="max-width: 17rem;">
+    <div class="card-body">
+        <img src="{{ imageObj.image.url }}" class="card-img-top">
+        <h5 class="card-body">{{ imageObj.title }}</h5>
+        <a class="btn btn-info" href="/imagelist/{{ imageObj.slug }}"><span class="fas fa-angle-right"></span> View</a>
+        <a class="btn btn-success" href="#"><span class="fas fa-copy"></span> Copy link</a>
+        {% if user.is_authenticated %}
+            <a class="btn btn-danger" href="/imagelist/{{ imageObj.slug }}/delete"><span class="fas fa-trash"></span> Remove</a>
+        {% endif %}
+    </div>
+    <div class="card-footer text-white">
+        <span class="fas fa-info-circle"></span> Uploaded {{ imageObj.add_timestamp }} UTC
+    </div>
+</div>

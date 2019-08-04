@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block page %}Upload a meme - free and no account needed!{% endblock %}
+{% block description %}Uploading your own meme to Epic Meme Club is completely free and no account is required!{% endblock %}
+
+{% block content %}
+
+<h1>Uploading your own meme is easy as pie!</h1>
+<p>Pick your image, give it a cool title, and set its link. Done!</p>
+
+<div class="alert alert-warning" role="alert">
+  We do not take responsibility for the content uploaded by our users. Check our <a href="/terms" class="alert-link">terms of use</a> for more information.
+  <br>
+  You should also read the <a href="/help#rules" class="alert-link">uploading rules</a> before you upload anything or it might get deleted by staff.
+</div>
+
+<form method="POST", action="." enctype="multipart/form-data"> {% csrf_token %}
+    {{ form.as_p }}
+
+    <a class="btn btn-info" href="/imagelist"><span class="fas fa-angle-left"></span> Back</a>
+    <button class="btn btn-success" type="submit"><span class="fas fa-upload"></span> Upload</button>
+</form>
+
+
+{% endblock %}

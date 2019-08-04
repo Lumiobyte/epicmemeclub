@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Epic Meme Club</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><span class="fas fa-home"></span> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/imagelist"><span class="fas fa-images"></span> Meme List</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/upload"><span class="fas fa-upload"></span> Upload</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-info-circle"></span> Information
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/help"><span class="fas fa-question-circle"></span> Help and QnA</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/terms"><span class="fas fa-handshake"></span> Terms of Service</a>
+            <a class="dropdown-item" href="/privacy"><span class="fas fa-user-secret"></span> Privacy Policy</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://lumiobyte.com/contact" target="_blank"><span class="fas fa-envelope"></span> Contact (external)</a>
+          </div>
+        </li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+              <a class="nav-link" href="/admin"><span class="fas fa-user-shield"></span> Admin Panel</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+              <a class="nav-link" href="/admin"><span class="fas fa-sign-in-alt"></span> Login</a>
+          </li>
+        {% endif %}
+        <!---
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+        -->
+    </div>
+  </nav>

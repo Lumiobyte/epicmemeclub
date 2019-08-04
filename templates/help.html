@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block page %}Epic Meme Club - Help and QnA{% endblock %}
+{% block description %}Read up on our rules and find out about some common QnA on this page.{% endblock %}
+
+{% block content %}
+
+<h1>Epic Meme Club Help</h1>
+<p>Read up on our uploading rules, and find out about some common QnA.</p>
+<div class="alert alert-primary" role="alert">
+  You should probably have a look at our <a href="/terms" class="alert-link">Terms of Service</a> too.
+</div>
+<br>
+<br>
+
+<h3>Uploading Rules</h3>
+
+<div class="accordion text-dark" id="rules">
+  <div class="card">
+    <div class="card-header" id="rulesHeadingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#rulesOne" aria-expanded="true" aria-controls="rulesOne">
+          Do not upload NSFW content.
+        </button>
+      </h2>
+    </div>
+
+    <div id="rulesOne" class="collapse show" aria-labelledby="rulesHeadingOne" data-parent="#rules">
+      <div class="card-body">
+      We'd like to keep our site a fun and accesible place for all ages to find and share their favourite memes. This means you <strong>CANNOT</strong> upload NSFW, sexual, gory, or otherwise unsuitable content.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="rulesHeadingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#rulesTwo" aria-expanded="false" aria-controls="rulesTwo">
+          Do not upload offensive content.
+        </button>
+      </h2>
+    </div>
+    <div id="rulesTwo" class="collapse" aria-labelledby="rulesHeadingTwo" data-parent="#rules">
+      <div class="card-body">
+        Please do not upload any content that could offend others. Once again, in an effort to keep this website and its content universally accessible, you <strong>CANNOT</strong> upload any content that could hurt or offend others. Even if you think it's a joke or that it's funny, others could take it to heart.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="rulesHeadingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#rulesThree" aria-expanded="false" aria-controls="rulesThree">
+          Do not upload advertising/spammy content.
+        </button>
+      </h2>
+    </div>
+    <div id="rulesThree" class="collapse" aria-labelledby="rulesHeadingThree" data-parent="#rules">
+      <div class="card-body">
+        This website is not free advertising space! Please <strong>DO NOT</strong> upload content that is solely for the purpose of promoting you/your business/another entity or content that is devoid of substance and does not deserve a few megabytes on our server. We have limited resources, none of which can be used to store spam!<br><br><strong>Watermarks on your original content is excluded</strong>, but do not make them exaggerated, or have them cover the content.
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<h3>General QnA</h3>
+
+<div class="accordion text-dark" id="qna">
+  <div class="card">
+    <div class="card-header" id="qnaHeadingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#qnaOne" aria-expanded="true" aria-controls="qnaOne">
+          Is there a file size limit?
+        </button>
+      </h2>
+    </div>
+
+    <div id="qnaOne" class="collapse show" aria-labelledby="qnaHeadingOne" data-parent="#qna">
+      <div class="card-body">
+        Currently there is no limit to the size of a file that you can upload. We do not support videos, so uploading them is difficult anyway, and even if you manage, they won't play. We hope you respect the fact we have limited resources and cannot accomodate to excessively large images.<br>We will introduce a limit if this privilege is abused. Don't ruin it for others.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="qnaHeadingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#qnaTwo" aria-expanded="false" aria-controls="qnaTwo">
+          How frequently can I upload?
+        </button>
+      </h2>
+    </div>
+    <div id="qnaTwo" class="collapse" aria-labelledby="qnaHeadingTwo" data-parent="#qna">
+      <div class="card-body">
+        As much as you want! We're leaving how much you upload up to you, but please do not spam. Once again, our bandwidth and storage space isn't infinite.<br>We will implement uploading ratelimits if this privilege is abused. Don't ruin it for others.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="qnaHeadingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#qnaThree" aria-expanded="false" aria-controls="qnaThree">
+        Do I need an account to upload?
+        </button>
+      </h2>
+    </div>
+    <div id="qnaThree" class="collapse" aria-labelledby="qnaHeadingThree" data-parent="#qna">
+      <div class="card-body">
+        You do not! That's a big difference with this site and many other meme sharing/image sharing websites. You do not need an account to upload your content.<br>We will implement an account requirement if this privilege is abused. Don't ruin it for others.
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Newest Dank Memes</h1>
+<p>The most recently uploaded images.</p>
+
+<div class="row">
+    {% for imageObj in imageObjList %}
+        {% include "imagesharing/image-inline.html" with imageObj=imageObj %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}
